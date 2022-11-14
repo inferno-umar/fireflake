@@ -1,0 +1,15 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option go_package = "../uid_gen";
+
+package uid_gen;
+
+service uid_gen {
+	rpc GenUID (google.protobuf.Empty) returns (UID) {}
+}
+
+message UID {
+	int64 Val = 1;
+}
+
